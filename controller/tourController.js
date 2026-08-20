@@ -15,4 +15,13 @@ const getTourById = (req, res) => {
     return res.json(tour);
 };
 
-module.exports = { getAllTours, getTourById };
+const getTourByIdQuery = (req, res) => {
+    const query = req.query.name;
+    const tours = tourModel.getTourByIdQuery(query);
+    if (tours.length === 0) {
+        return res.status(404).json({ message: 'No tours found matching the query' });
+    }
+    return res.json(tours);
+};
+
+module.exports = { getAllTours, getTourById, getTourByIdQuery   };

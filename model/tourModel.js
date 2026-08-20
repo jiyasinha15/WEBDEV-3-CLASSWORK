@@ -13,4 +13,13 @@ const getById = (id) => {
     return tours.find(tour => tour.id === id);
 };
 
-module.exports = { getAll, getById };
+const getByIdQuery = (id) => {
+    const tours = getAll();
+    return tours.filter(tour => tour.name.includes({query}));
+}
+
+const save = (tours) => {
+    fs.writeFileSync(tourFilePath, JSON.stringify({ tours }, null, 2));
+}
+
+module.exports = { getAll, getById, getByIdQuery, save };
