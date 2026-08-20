@@ -1,0 +1,14 @@
+{
+  "tours": [
+    {
+      "id": 1,
+      "name": "Manali Tour",
+      "price": 5000
+    },
+    {
+      "id": 2,
+      "name": "Goa Tour",
+      "price": 7000
+    }
+  ]
+}
