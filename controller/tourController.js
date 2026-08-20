@@ -6,4 +6,13 @@ const getAllTours = (req, res) => {
     res.json(tours);
 };
 
-module.exports = { getAllTours };
+const getTourById = (req, res) => {
+    const id = parseInt(req.params.id);
+    const tour = tourModel.getById(id);
+    if (!tour) {
+        return res.status(404).json({ message: 'Tour not found' });
+    }
+    return res.json(tour);
+};
+
+module.exports = { getAllTours, getTourById };
