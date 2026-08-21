@@ -13,13 +13,25 @@ const getById = (id) => {
     return tours.find(tour => tour.id === id);
 };
 
-const getByIdQuery = (id) => {
+const getByIdQuery = (query) => {
     const tours = getAll();
-    return tours.filter(tour => tour.name.includes({query}));
-}
+    return tours.filter(tour => tour.name.includes(query));
+};
 
-const save = (tours) => {
-    fs.writeFileSync(tourFilePath, JSON.stringify({ tours }, null, 2));
-}
+const save = (newTour) => {
+    const tours = getAll();
+    tours.push(newTour);
+    fs.writeFileSync(tourFilePath, JSON.stringify({ tours }), 'utf-8');
+};
 
-module.exports = { getAll, getById, getByIdQuery, save };
+const update = (id, updatedTour) => {
+    const tours = getAll();
+    const index = tours.findIndex(tour => tour.id === id);
+    if (index !== -1) {
+        tours[index] = { ...tours[index], ...updatedTour };
+        fs.writeFileSync(tourFilePath, JSON.stringify({ tours }), 'utf-8');
+    }
+    return null;
+};
+
+module.exports = { getAll, getById, getByIdQuery, save, update };

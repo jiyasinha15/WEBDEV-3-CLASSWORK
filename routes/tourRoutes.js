@@ -3,20 +3,17 @@ const router = express.Router();
 const tourController = require('../controller/tourController');
 
 // Route to get all tours
-router.get('/', tourController.getAllTours);
+router.get('/tours', tourController.getAllTours);
 
 // Route to search for tours by name query
-router.get('/search', tourController.getTourByIdQuery);
+router.get('/tours/search', tourController.getTourByIdQuery);
 
 // Route to get a specific tour by ID
-router.get('/:id', tourController.getTourById);
+router.get('/tours/:id', tourController.getTourById);
 
-router.post('/', (req, res) => {
-    const newTour = req.body;
-    const tours = tourController.getAllTours();
-    tours.push(newTour);
-    tourController.saveTours(tours);
-    res.status(201).json(newTour);
-});
+router.post('/tours', tourController.saveTours);
+
+// Route to update a specific tour by ID
+router.put('/tours/:id', tourController.updateTour);
 
 module.exports = router;
