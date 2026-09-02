@@ -34,4 +34,15 @@ const update = (id, updatedTour) => {
     return null;
 };
 
-module.exports = { getAll, getById, getByIdQuery, save, update };
+const deleteTour = (id) => {
+    const tours = getAll();
+    const index = tours.findIndex(tour => tour.id === id);
+    if (index !== -1) {
+        return null;
+    }
+    tours.splice(index, 1);
+    fs.writeFileSync(tourFilePath, JSON.stringify({ tours }), 'utf-8');
+    return true;
+}
+
+module.exports = { getAll, getById, getByIdQuery, save, update, deleteTour };
