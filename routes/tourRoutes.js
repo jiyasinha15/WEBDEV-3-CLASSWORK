@@ -16,4 +16,7 @@ router.post('/tours', tourController.saveTours);
 // Route to update a specific tour by ID
 router.put('/tours/:id', tourController.updateTour);
 
+// Route to delete a specific tour by ID
+router.delete('/tours/:id', tourController.deleteTourById);
+
 module.exports = router;

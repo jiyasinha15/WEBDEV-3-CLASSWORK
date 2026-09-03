@@ -3,12 +3,154 @@
     {
       "id": 1,
       "name": "Manali Tour",
-      "price": 5000
+      "price": 5000,
+      "category": "Adventure",
+      "destination": "Manali",
+      "duration": "5 days"
     },
     {
       "id": 2,
       "name": "Goa Tour",
-      "price": 7000
+      "price": 7000,
+      "category": "Beach",
+      "destination": "Goa",
+      "duration": "4 days"
+    },
+    {
+      "id": 3,
+      "name": "Kerala Nature Tour",
+      "price": 6500,
+      "category": "Nature",
+      "destination": "Kerala",
+      "duration": "5 days"
+    },
+    {
+      "id": 4,
+      "name": "Rajasthan Cultural Tour",
+      "price": 9000,
+      "category": "Cultural",
+      "destination": "Rajasthan",
+      "duration": "6 days"
+    },
+    {
+      "id": 5,
+      "name": "Maldives Luxury Tour",
+      "price": 25000,
+      "category": "Luxury",
+      "destination": "Maldives",
+      "duration": "7 days"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Rahul Sharma",
+      "age": 24,
+      "occupation": "Software Developer",
+      "monthlySalary": 60000,
+      "city": "Delhi",
+      "travelBudget": 10000,
+      "travelPreference": "Adventure",
+      "preferredDestination": "Manali"
+    },
+    {
+      "id": 2,
+      "name": "Priya Verma",
+      "age": 28,
+      "occupation": "Marketing Executive",
+      "monthlySalary": 70000,
+      "city": "Mumbai",
+      "travelBudget": 15000,
+      "travelPreference": "Beach",
+      "preferredDestination": "Goa"
+    },
+    {
+      "id": 3,
+      "name": "Aman Gupta",
+      "age": 21,
+      "occupation": "Student",
+      "monthlySalary": 12000,
+      "city": "Jaipur",
+      "travelBudget": 6000,
+      "travelPreference": "Adventure",
+      "preferredDestination": "Manali"
+    },
+    {
+      "id": 4,
+      "name": "Sneha Kapoor",
+      "age": 26,
+      "occupation": "Graphic Designer",
+      "monthlySalary": 50000,
+      "city": "Delhi",
+      "travelBudget": 12000,
+      "travelPreference": "Beach",
+      "preferredDestination": "Goa"
+    },
+    {
+      "id": 5,
+      "name": "Rohan Mehta",
+      "age": 32,
+      "occupation": "Business Owner",
+      "monthlySalary": 100000,
+      "city": "Bengaluru",
+      "travelBudget": 30000,
+      "travelPreference": "Luxury",
+      "preferredDestination": "Maldives"
+    },
+    {
+      "id": 6,
+      "name": "Anjali Singh",
+      "age": 29,
+      "occupation": "Teacher",
+      "monthlySalary": 45000,
+      "city": "Lucknow",
+      "travelBudget": 9000,
+      "travelPreference": "Nature",
+      "preferredDestination": "Kerala"
+    },
+    {
+      "id": 7,
+      "name": "Karan Patel",
+      "age": 27,
+      "occupation": "Engineer",
+      "monthlySalary": 75000,
+      "city": "Ahmedabad",
+      "travelBudget": 18000,
+      "travelPreference": "Adventure",
+      "preferredDestination": "Manali"
+    },
+    {
+      "id": 8,
+      "name": "Meera Joshi",
+      "age": 25,
+      "occupation": "Content Writer",
+      "monthlySalary": 40000,
+      "city": "Pune",
+      "travelBudget": 8000,
+      "travelPreference": "Beach",
+      "preferredDestination": "Goa"
+    },
+    {
+      "id": 9,
+      "name": "Vikram Malhotra",
+      "age": 38,
+      "occupation": "Doctor",
+      "monthlySalary": 150000,
+      "city": "Chandigarh",
+      "travelBudget": 50000,
+      "travelPreference": "Luxury",
+      "preferredDestination": "Maldives"
+    },
+    {
+      "id": 10,
+      "name": "Ishita Roy",
+      "age": 23,
+      "occupation": "HR Executive",
+      "monthlySalary": 45000,
+      "city": "Kolkata",
+      "travelBudget": 11000,
+      "travelPreference": "Adventure",
+      "preferredDestination": "Manali"
     }
   ]
 }

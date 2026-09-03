@@ -37,4 +37,13 @@ const updateTour = (req, res) => {
     res.json({ message: 'Tour updated successfully' });
 };
 
-module.exports = { getAllTours, getTourById, getTourByIdQuery, saveTours, updateTour };
+const deleteTourById = (req, res) => {
+    const id = parseInt(req.params.id);
+    const result = tourModel.deleteTour(id);
+    if (!result) {
+        return res.status(404).json({ message: 'Tour not found' });
+    }
+    res.json({ message: 'Tour deleted successfully' });
+};
+
+module.exports = { getAllTours, getTourById, getTourByIdQuery, saveTours, updateTour, deleteTourById };
