@@ -2,6 +2,9 @@ const express = require('express');
 
 const app = express();
 
+const morgan = require('morgan');
+app.use(morgan('dev'));
+
 // const tourRoutes = require('./routes/tourRoutes');
 // const userRoutes = require('./routes/userRoutes');
 
